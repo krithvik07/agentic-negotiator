@@ -14,5 +14,4 @@ A multi-agent AI negotiation platform where specialized Consumer, Producer, and 
 - scripts/ - helper scripts
 - init_db.py - database setup
 
-## Credits
-Originally based on https://github.com/AbhinavRAS/ConPro
+
