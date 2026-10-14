@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ConPro — AI Negotiation Platform</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body class="theme-dark">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo">⚙️</div>
+        <div>
+          <h1>ConPro</h1>
+          <p>AI Agent-Based Negotiation Platform</p>
+        </div>
+      </div>
+
+      <div class="role-toggle">
+        <span class="label">Role:</span>
+        <button id="roleConsumer" class="pill active">Consumer</button>
+        <button id="roleProducer" class="pill">Producer</button>
+      </div>
+    </header>
+
+    <nav class="wizard">
+      <button class="tab active" data-tab="tab-auth">1. Auth</button>
+      <button class="tab" data-tab="tab-workspace">2. Workspace</button>
+      <button class="tab" data-tab="tab-negotiation">3. Negotiation</button>
+      <button class="tab" data-tab="tab-summary">4. Summary</button>
+      <div class="progress"><div class="bar" id="progressBar"></div></div>
+    </nav>
+
+    <main class="content">
+      <!-- TAB 1: AUTH -->
+      <section id="tab-auth" class="tab-pane active">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Signup</h2>
+            <div class="form">
+              <label>Name</label>
+              <input id="name" placeholder="Your name" value="Alex User"/>
+              <div class="grid-2">
+                <div>
+                  <label>Email</label>
+                  <input id="email" placeholder="you@example.com" value="alex@example.com"/>
+                </div>
+                <div>
+                  <label>Password</label>
+                  <input id="password" type="password" placeholder="••••••••" value="test123"/>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div>
+                  <label>Signup as</label>
+                  <select id="signup_role">
+                    <option value="consumer" selected>Consumer</option>
+                    <option value="producer">Producer</option>
+                  </select>
+                </div>
+              </div>
+              <button id="btnSignup" class="primary">Create account</button>
+            </div>
+
+            <details class="debug">
+              <summary>Debug JSON (Signup)</summary>
+              <pre id="signup_out" class="log"></pre>
+            </details>
+          </div>
+
+          <div class="card">
+            <h2>Login</h2>
+            <div class="form">
+              <div class="grid-2">
+                <div>
+                  <label>Email</label>
+                  <input id="login_email" placeholder="you@example.com" value="alex@example.com"/>
+                </div>
+                <div>
+                  <label>Password</label>
+                  <input id="login_password" type="password" placeholder="••••••••" value="test123"/>
+                </div>
+              </div>
+              <button id="btnLogin" class="primary">Sign in</button>
+            </div>
+
+            <details class="debug">
+              <summary>Debug JSON (Login)</summary>
+              <pre id="login_out" class="log"></pre>
+            </details>
+          </div>
+        </div>
+        <div class="hint">After auth, your ID is stored and the next step unlocks based on the selected role.</div>
+      </section>
+
+      <!-- TAB 2: WORKSPACE -->
+      <section id="tab-workspace" class="tab-pane">
+        <div class="grid-2">
+          <!-- Consumer workspace -->
+          <div class="card role-consumer-only">
+            <h2>Consumer Workspace — Submit Request</h2>
+            <div class="form">
+              <div class="grid-3">
+                <div>
+                  <label>Consumer ID</label>
+                  <input id="consumer_id" placeholder="Auto-filled after auth"/>
+                </div>
+                <div>
+                  <label>Product</label>
+                  <select id="product_name">
+                    <option>Wheat</option><option>Cement</option><option>Handmade Pottery</option>
+                    <option>Paracetamol Tablets</option><option>Cotton Fabric</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input id="quantity" type="number" value="300"/>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div>
+                  <label>Budget (per unit)</label>
+                  <input id="budget" type="number" step="0.01" value="60"/>
+                </div>
+                <div>
+                  <label>Specs (JSON)</label>
+                  <textarea id="specs" rows="3">{ "quality": "A" }</textarea>
+                </div>
+              </div>
+              <button id="btnSubmitRequest" class="primary">Submit Request</button>
+            </div>
+
+            <div id="request_human" class="human"></div>
+            <details class="debug">
+              <summary>Debug JSON (Request)</summary>
+              <pre id="request_out" class="log"></pre>
+            </details>
+          </div>
+
+          <!-- Producer workspace -->
+          <div class="card role-producer-only hidden">
+            <h2>Producer Workspace — Register Product</h2>
+            <div class="form">
+              <div class="grid-3">
+                <div>
+                  <label>Producer ID</label>
+                  <input id="producer_id" placeholder="Auto-filled after auth"/>
+                </div>
+                <div>
+                  <label>Product Name</label>
+                  <input id="prod_name" placeholder="e.g., Wheat"/>
+                </div>
+                <div>
+                  <label>Domain</label>
+                  <select id="prod_domain">
+                    <option value="agriculture">Agriculture</option>
+                    <option value="construction">Construction</option>
+                    <option value="handicrafts">Handicrafts</option>
+                    <option value="pharma">Pharma</option>
+                    <option value="textiles">Textiles</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid-3">
+                <div>
+                  <label>Price</label>
+                  <input id="prod_price" type="number" step="0.01" placeholder="55.00"/>
+                </div>
+                <div>
+                  <label>Quantity</label>
+                  <input id="prod_qty" type="number" placeholder="800"/>
+                </div>
+                <div>
+                  <label>Specs (JSON)</label>
+                  <textarea id="prod_specs" rows="3">{ "quality":"A","origin":"Punjab" }</textarea>
+                </div>
+              </div>
+              <button id="btnAddProduct" class="primary">Register Product</button>
+            </div>
+
+            <div id="producer_human" class="human"></div>
+            <details class="debug">
+              <summary>Debug JSON (Product)</summary>
+              <pre id="producer_out" class="log"></pre>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: NEGOTIATION -->
+      <section id="tab-negotiation" class="tab-pane">
+        <div class="card">
+          <h2>Start Negotiation</h2>
+          <div class="form">
+            <div class="grid-3">
+              <div>
+                <label>Num Producers</label>
+                <input id="num_producers" type="number" value="3"/>
+              </div>
+              <div>
+                <label>Num Rounds</label>
+                <input id="num_rounds" type="number" value="3"/>
+              </div>
+              <div>
+                <label>Use LLM</label>
+                <select id="use_llm"><option value="false" selected>No</option><option value="true">Yes</option></select>
+              </div>
+            </div>
+            <label>Product JSON</label>
+            <textarea id="product_json" rows="6">{
+  "name": "Wheat",
+  "price": 55.0,
+  "quantity": 800,
+  "specs": { "quality": "A", "origin": "Punjab" }
+}</textarea>
+            <button id="btnStart" class="primary">Start Session</button>
+          </div>
+
+          <div id="start_human" class="human"></div>
+          <details class="debug">
+            <summary>Debug JSON (Start)</summary>
+            <pre id="start_out" class="log"></pre>
+          </details>
+        </div>
+
+        <div class="card">
+          <h2>Round Offers</h2>
+          <div class="form grid-4 flow-row">
+            <div>
+              <label>Session ID</label>
+              <input id="session_id" placeholder="Auto-filled"/>
+            </div>
+            <div>
+              <label>Round</label>
+              <input id="round_number" type="number" value="1"/>
+            </div>
+            <div style="display:flex;align-items:end;gap:8px;">
+              <button id="btnPrevRound" class="ghost">Prev</button>
+              <button id="btnRound">Fetch</button>
+              <button id="btnNextRound" class="ghost">Next</button>
+            </div>
+          </div>
+
+          <!-- Human-readable table -->
+          <div id="offers_table_wrap"></div>
+
+          <details class="debug">
+            <summary>Debug JSON (Round)</summary>
+            <pre id="round_out" class="log"></pre>
+          </details>
+        </div>
+
+        <div class="card">
+          <h2>Choose & Finalize</h2>
+          <div class="form grid-3">
+            <div>
+              <label>Round</label>
+              <input id="choose_round_number" type="number" value="1"/>
+            </div>
+            <div>
+              <label>Offer Index (1-based)</label>
+              <input id="choose_offer_index" type="number" value="1"/>
+            </div>
+            <div style="display:flex;align-items:end;">
+              <button id="btnChoose">Choose Offer</button>
+            </div>
+          </div>
+
+          <div id="choose_human" class="human"></div>
+          <details class="debug">
+            <summary>Debug JSON (Choose)</summary>
+            <pre id="choose_out" class="log"></pre>
+          </details>
+
+          <div class="form grid-3">
+            <div>
+              <label>Chosen Deal Index</label>
+              <input id="chosen_deal_index" type="number" value="0"/>
+            </div>
+            <div style="display:flex;align-items:end;">
+              <button id="btnFinalize" class="primary">Finalize</button>
+            </div>
+          </div>
+
+          <div id="final_human" class="human"></div>
+          <details class="debug">
+            <summary>Debug JSON (Finalize)</summary>
+            <pre id="final_out" class="log"></pre>
+          </details>
+        </div>
+      </section>
+
+      <!-- TAB 4: SUMMARY -->
+      <section id="tab-summary" class="tab-pane">
+        <div class="card">
+          <h2>Negotiation Summary</h2>
+          <div class="actions"><button id="btnSummary" class="primary">Get Summary</button></div>
+
+          <div id="summary_human" class="human"></div>
+          <details class="debug">
+            <summary>Debug JSON (Summary)</summary>
+            <pre id="summary_out" class="log"></pre>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>© ConPro • Multi-agent, multi-round negotiations</span>
+      <span id="footSession">Session: —</span>
+    </footer>
+  </div>
+
+  <!-- toast container -->
+  <div id="toasts" class="toasts"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Summary - Negotiation Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <a class="tag" href="/frontend/index.html">Home</a>
+    <a class="tag" href="/frontend/signup.html">Signup</a>
+    <a class="tag" href="/frontend/login.html">Login</a>
+    <a class="tag" href="/frontend/request.html">Request</a>
+    <a class="tag" href="/frontend/negotiate.html">Negotiate</a>
+    <a class="tag" href="/frontend/summary.html">Summary</a>
+  </header>
+  <main>
+    <section>
+      <h2>Negotiation Summary</h2>
+      <label>Session ID</label>
+      <input id="session_id" placeholder="From Start" />
+      <button id="btnSummary">Get Summary</button>
+      <pre id="summary_out"></pre>
+    </section>
+
+    <section>
+      <h2>Finalize Negotiation</h2>
+      <label>Chosen Deal Index (0-based)</label>
+      <input id="chosen_deal_index" type="number" value="0" />
+      <button id="btnFinalize">Finalize</button>
+      <pre id="final_out"></pre>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

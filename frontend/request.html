@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit Request - Negotiation Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <a class="tag" href="/frontend/index.html">Home</a>
+    <a class="tag" href="/frontend/signup.html">Signup</a>
+    <a class="tag" href="/frontend/login.html">Login</a>
+    <a class="tag" href="/frontend/request.html">Request</a>
+    <a class="tag" href="/frontend/negotiate.html">Negotiate</a>
+    <a class="tag" href="/frontend/summary.html">Summary</a>
+  </header>
+  <main>
+    <section>
+      <h2>Submit Consumer Request</h2>
+      <label>Consumer ID</label>
+      <input id="consumer_id" placeholder="From signup/login" />
+      <label>Product Name</label>
+      <select id="product_name">
+        <option>Wheat</option>
+        <option>Cement</option>
+        <option>Handmade Pottery</option>
+        <option>Paracetamol Tablets</option>
+        <option>Cotton Fabric</option>
+      </select>
+      <div class="row">
+        <div>
+          <label>Quantity</label>
+          <input id="quantity" type="number" value="300" />
+        </div>
+        <div>
+          <label>Budget</label>
+          <input id="budget" type="number" step="0.01" value="60" />
+        </div>
+      </div>
+      <label>Specs (JSON)</label>
+      <textarea id="specs" rows="3">{
+  "quality": "A"
+}</textarea>
+      <button id="btnSubmitRequest">Submit Request</button>
+      <pre id="request_out"></pre>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

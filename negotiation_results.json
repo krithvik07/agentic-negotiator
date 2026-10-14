@@ -1,0 +1,703 @@
+{
+  "negotiation_history": [
+    {
+      "round": 1,
+      "offers": [
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 1,
+          "offer": {
+            "price": 69.68,
+            "quantity": 585,
+            "total_cost": 40762.8,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "15 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 8.1,
+            "delivery_reliability": 98.0,
+            "payment_flexibility": 8.3
+          }
+        },
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 1,
+          "offer": {
+            "price": 69.47,
+            "quantity": 482,
+            "total_cost": 33484.54,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "8 days delivery",
+            "payment_terms": "15 days",
+            "quality_rating": 8.5,
+            "delivery_reliability": 97.2,
+            "payment_flexibility": 8.0
+          }
+        },
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 1,
+          "offer": {
+            "price": 69.31,
+            "quantity": 587,
+            "total_cost": 40684.97,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "21 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 7.2,
+            "delivery_reliability": 86.1,
+            "payment_flexibility": 7.2
+          }
+        }
+      ],
+      "eligible_offers": [
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 1,
+          "offer": {
+            "price": 69.68,
+            "quantity": 585,
+            "total_cost": 40762.8,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "15 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 8.1,
+            "delivery_reliability": 98.0,
+            "payment_flexibility": 8.3
+          },
+          "satisfaction": {
+            "total_satisfaction": 78.1,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 57.1,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 81.0,
+              "delivery_satisfaction": 98.0,
+              "payment_satisfaction": 83.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 1,
+          "offer": {
+            "price": 69.47,
+            "quantity": 482,
+            "total_cost": 33484.54,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "8 days delivery",
+            "payment_terms": "15 days",
+            "quality_rating": 8.5,
+            "delivery_reliability": 97.2,
+            "payment_flexibility": 8.0
+          },
+          "satisfaction": {
+            "total_satisfaction": 77.5,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 57.4,
+              "quantity_satisfaction": 96.4,
+              "quality_satisfaction": 85.0,
+              "delivery_satisfaction": 97.2,
+              "payment_satisfaction": 80.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 1,
+          "offer": {
+            "price": 69.31,
+            "quantity": 587,
+            "total_cost": 40684.97,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "21 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 7.2,
+            "delivery_reliability": 86.1,
+            "payment_flexibility": 7.2
+          },
+          "satisfaction": {
+            "total_satisfaction": 74.6,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 57.6,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 72.0,
+              "delivery_satisfaction": 86.1,
+              "payment_satisfaction": 72.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        }
+      ],
+      "consumer_choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 1,
+        "offer": {
+          "price": 69.47,
+          "quantity": 482,
+          "total_cost": 33484.54,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "8 days delivery",
+          "payment_terms": "15 days",
+          "quality_rating": 8.5,
+          "delivery_reliability": 97.2,
+          "payment_flexibility": 8.0
+        },
+        "satisfaction": {
+          "total_satisfaction": 77.5,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 57.4,
+            "quantity_satisfaction": 96.4,
+            "quality_satisfaction": 85.0,
+            "delivery_satisfaction": 97.2,
+            "payment_satisfaction": 80.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "declined",
+        "producer_name": "Producer #3",
+        "reason": "Price is too low for our quality standards",
+        "message": "Producer #3 cannot accept this deal at this time."
+      }
+    },
+    {
+      "round": 2,
+      "offers": [
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 2,
+          "offer": {
+            "price": 68.71,
+            "quantity": 579,
+            "total_cost": 39783.09,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "9 days delivery",
+            "payment_terms": "15 days",
+            "quality_rating": 8.3,
+            "delivery_reliability": 96.0,
+            "payment_flexibility": 6.5
+          }
+        },
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 2,
+          "offer": {
+            "price": 69.17,
+            "quantity": 529,
+            "total_cost": 36590.93,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "12 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 8.7,
+            "delivery_reliability": 97.0,
+            "payment_flexibility": 8.3
+          }
+        },
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 2,
+          "offer": {
+            "price": 68.9,
+            "quantity": 425,
+            "total_cost": 29282.5,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "12 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 7.6,
+            "delivery_reliability": 87.5,
+            "payment_flexibility": 9.0
+          }
+        }
+      ],
+      "eligible_offers": [
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 2,
+          "offer": {
+            "price": 68.71,
+            "quantity": 579,
+            "total_cost": 39783.09,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "9 days delivery",
+            "payment_terms": "15 days",
+            "quality_rating": 8.3,
+            "delivery_reliability": 96.0,
+            "payment_flexibility": 6.5
+          },
+          "satisfaction": {
+            "total_satisfaction": 76.9,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 58.4,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 83.0,
+              "delivery_satisfaction": 96.0,
+              "payment_satisfaction": 65.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 2,
+          "offer": {
+            "price": 69.17,
+            "quantity": 529,
+            "total_cost": 36590.93,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "12 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 8.7,
+            "delivery_reliability": 97.0,
+            "payment_flexibility": 8.3
+          },
+          "satisfaction": {
+            "total_satisfaction": 79.2,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 57.8,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 87.0,
+              "delivery_satisfaction": 97.0,
+              "payment_satisfaction": 83.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 2,
+          "offer": {
+            "price": 68.9,
+            "quantity": 425,
+            "total_cost": 29282.5,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "12 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 7.6,
+            "delivery_reliability": 87.5,
+            "payment_flexibility": 9.0
+          },
+          "satisfaction": {
+            "total_satisfaction": 73.7,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 58.1,
+              "quantity_satisfaction": 85.0,
+              "quality_satisfaction": 76.0,
+              "delivery_satisfaction": 87.5,
+              "payment_satisfaction": 90.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        }
+      ],
+      "consumer_choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 2,
+        "offer": {
+          "price": 68.71,
+          "quantity": 579,
+          "total_cost": 39783.09,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "9 days delivery",
+          "payment_terms": "15 days",
+          "quality_rating": 8.3,
+          "delivery_reliability": 96.0,
+          "payment_flexibility": 6.5
+        },
+        "satisfaction": {
+          "total_satisfaction": 76.9,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 58.4,
+            "quantity_satisfaction": 100.0,
+            "quality_satisfaction": 83.0,
+            "delivery_satisfaction": 96.0,
+            "payment_satisfaction": 65.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "declined",
+        "producer_name": "Producer #3",
+        "reason": "Minimum quantity requirements not met",
+        "message": "Producer #3 cannot accept this deal at this time."
+      }
+    },
+    {
+      "round": 3,
+      "offers": [
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 3,
+          "offer": {
+            "price": 68.07,
+            "quantity": 509,
+            "total_cost": 34647.63,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "18 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 7.0,
+            "delivery_reliability": 97.5,
+            "payment_flexibility": 8.6
+          }
+        },
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 3,
+          "offer": {
+            "price": 69.89,
+            "quantity": 404,
+            "total_cost": 28235.56,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "21 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 7.8,
+            "delivery_reliability": 89.0,
+            "payment_flexibility": 7.2
+          }
+        },
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 3,
+          "offer": {
+            "price": 69.76,
+            "quantity": 524,
+            "total_cost": 36554.24,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "7 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 8.6,
+            "delivery_reliability": 97.5,
+            "payment_flexibility": 8.7
+          }
+        }
+      ],
+      "eligible_offers": [
+        {
+          "producer_id": 1,
+          "producer_name": "Producer #1",
+          "round": 3,
+          "offer": {
+            "price": 68.07,
+            "quantity": 509,
+            "total_cost": 34647.63,
+            "note": "Competitive offer from Producer #1",
+            "delivery_terms": "18 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 7.0,
+            "delivery_reliability": 97.5,
+            "payment_flexibility": 8.6
+          },
+          "satisfaction": {
+            "total_satisfaction": 77.5,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 59.2,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 70.0,
+              "delivery_satisfaction": 97.5,
+              "payment_satisfaction": 86.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 2,
+          "producer_name": "Producer #2",
+          "round": 3,
+          "offer": {
+            "price": 69.89,
+            "quantity": 404,
+            "total_cost": 28235.56,
+            "note": "Competitive offer from Producer #2",
+            "delivery_terms": "21 days delivery",
+            "payment_terms": "Cash on delivery",
+            "quality_rating": 7.8,
+            "delivery_reliability": 89.0,
+            "payment_flexibility": 7.2
+          },
+          "satisfaction": {
+            "total_satisfaction": 70.7,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 56.8,
+              "quantity_satisfaction": 80.8,
+              "quality_satisfaction": 78.0,
+              "delivery_satisfaction": 89.0,
+              "payment_satisfaction": 72.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        },
+        {
+          "producer_id": 3,
+          "producer_name": "Producer #3",
+          "round": 3,
+          "offer": {
+            "price": 69.76,
+            "quantity": 524,
+            "total_cost": 36554.24,
+            "note": "Competitive offer from Producer #3",
+            "delivery_terms": "7 days delivery",
+            "payment_terms": "30 days",
+            "quality_rating": 8.6,
+            "delivery_reliability": 97.5,
+            "payment_flexibility": 8.7
+          },
+          "satisfaction": {
+            "total_satisfaction": 79.1,
+            "category": "Good",
+            "emoji": "\ud83d\udc4d",
+            "breakdown": {
+              "price_satisfaction": 57.0,
+              "quantity_satisfaction": 100.0,
+              "quality_satisfaction": 86.0,
+              "delivery_satisfaction": 97.5,
+              "payment_satisfaction": 87.0
+            },
+            "strengths": [],
+            "concerns": []
+          }
+        }
+      ],
+      "consumer_choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 3,
+        "offer": {
+          "price": 69.76,
+          "quantity": 524,
+          "total_cost": 36554.24,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "7 days delivery",
+          "payment_terms": "30 days",
+          "quality_rating": 8.6,
+          "delivery_reliability": 97.5,
+          "payment_flexibility": 8.7
+        },
+        "satisfaction": {
+          "total_satisfaction": 79.1,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 57.0,
+            "quantity_satisfaction": 100.0,
+            "quality_satisfaction": 86.0,
+            "delivery_satisfaction": 97.5,
+            "payment_satisfaction": 87.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "accepted",
+        "producer_name": "Producer #3",
+        "final_terms": {
+          "price": 69.76,
+          "quantity": 524,
+          "total_cost": 36554.24,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "7 days delivery",
+          "payment_terms": "30 days",
+          "quality_rating": 8.6,
+          "delivery_reliability": 97.5,
+          "payment_flexibility": 8.7
+        },
+        "message": "Producer #3 is happy to proceed with this deal."
+      }
+    }
+  ],
+  "consumer_choices": [
+    {
+      "round": 1,
+      "choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 1,
+        "offer": {
+          "price": 69.47,
+          "quantity": 482,
+          "total_cost": 33484.54,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "8 days delivery",
+          "payment_terms": "15 days",
+          "quality_rating": 8.5,
+          "delivery_reliability": 97.2,
+          "payment_flexibility": 8.0
+        },
+        "satisfaction": {
+          "total_satisfaction": 77.5,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 57.4,
+            "quantity_satisfaction": 96.4,
+            "quality_satisfaction": 85.0,
+            "delivery_satisfaction": 97.2,
+            "payment_satisfaction": 80.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "declined",
+        "producer_name": "Producer #3",
+        "reason": "Price is too low for our quality standards",
+        "message": "Producer #3 cannot accept this deal at this time."
+      }
+    },
+    {
+      "round": 2,
+      "choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 2,
+        "offer": {
+          "price": 68.71,
+          "quantity": 579,
+          "total_cost": 39783.09,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "9 days delivery",
+          "payment_terms": "15 days",
+          "quality_rating": 8.3,
+          "delivery_reliability": 96.0,
+          "payment_flexibility": 6.5
+        },
+        "satisfaction": {
+          "total_satisfaction": 76.9,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 58.4,
+            "quantity_satisfaction": 100.0,
+            "quality_satisfaction": 83.0,
+            "delivery_satisfaction": 96.0,
+            "payment_satisfaction": 65.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "declined",
+        "producer_name": "Producer #3",
+        "reason": "Minimum quantity requirements not met",
+        "message": "Producer #3 cannot accept this deal at this time."
+      }
+    },
+    {
+      "round": 3,
+      "choice": {
+        "producer_id": 3,
+        "producer_name": "Producer #3",
+        "round": 3,
+        "offer": {
+          "price": 69.76,
+          "quantity": 524,
+          "total_cost": 36554.24,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "7 days delivery",
+          "payment_terms": "30 days",
+          "quality_rating": 8.6,
+          "delivery_reliability": 97.5,
+          "payment_flexibility": 8.7
+        },
+        "satisfaction": {
+          "total_satisfaction": 79.1,
+          "category": "Good",
+          "emoji": "\ud83d\udc4d",
+          "breakdown": {
+            "price_satisfaction": 57.0,
+            "quantity_satisfaction": 100.0,
+            "quality_satisfaction": 86.0,
+            "delivery_satisfaction": 97.5,
+            "payment_satisfaction": 87.0
+          },
+          "strengths": [],
+          "concerns": []
+        }
+      },
+      "producer_response": {
+        "producer_response": "accepted",
+        "producer_name": "Producer #3",
+        "final_terms": {
+          "price": 69.76,
+          "quantity": 524,
+          "total_cost": 36554.24,
+          "note": "Competitive offer from Producer #3",
+          "delivery_terms": "7 days delivery",
+          "payment_terms": "30 days",
+          "quality_rating": 8.6,
+          "delivery_reliability": 97.5,
+          "payment_flexibility": 8.7
+        },
+        "message": "Producer #3 is happy to proceed with this deal."
+      }
+    }
+  ],
+  "final_deal": {
+    "producer_response": "accepted",
+    "producer_name": "Producer #3",
+    "final_terms": {
+      "price": 69.76,
+      "quantity": 524,
+      "total_cost": 36554.24,
+      "note": "Competitive offer from Producer #3",
+      "delivery_terms": "7 days delivery",
+      "payment_terms": "30 days",
+      "quality_rating": 8.6,
+      "delivery_reliability": 97.5,
+      "payment_flexibility": 8.7
+    },
+    "message": "Producer #3 is happy to proceed with this deal."
+  },
+  "negotiation_status": "completed"
+}

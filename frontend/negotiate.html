@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Negotiate - Negotiation Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <a class="tag" href="/frontend/index.html">Home</a>
+    <a class="tag" href="/frontend/signup.html">Signup</a>
+    <a class="tag" href="/frontend/login.html">Login</a>
+    <a class="tag" href="/frontend/request.html">Request</a>
+    <a class="tag" href="/frontend/negotiate.html">Negotiate</a>
+    <a class="tag" href="/frontend/summary.html">Summary</a>
+  </header>
+  <main>
+    <section>
+      <h2>Start Negotiation</h2>
+      <p>Provide product reference to start the negotiation. Defaults aligned to DB.</p>
+      <label>Product JSON</label>
+      <textarea id="product_json" rows="8">{
+  "name": "Wheat",
+  "price": 55.0,
+  "quantity": 800,
+  "specs": {
+    "quality": "A",
+    "origin": "Punjab"
+  }
+}</textarea>
+      <label>Use LLM</label>
+      <select id="use_llm"><option value="false" selected>No</option><option value="true">Yes</option></select>
+      <div class="row">
+        <div>
+          <label>Num Producers</label>
+          <input id="num_producers" type="number" value="3" />
+        </div>
+        <div>
+          <label>Num Rounds</label>
+          <input id="num_rounds" type="number" value="3" />
+        </div>
+      </div>
+      <button id="btnStart">Start</button>
+      <pre id="start_out"></pre>
+    </section>
+
+    <section>
+      <h2>Round Offers</h2>
+      <label>Session ID</label>
+      <input id="session_id" placeholder="From Start" />
+      <label>Round Number</label>
+      <input id="round_number" type="number" value="1" />
+      <div class="row">
+        <button id="btnRound">Get Round</button>
+        <button id="btnNextRound">Next Round</button>
+      </div>
+      <pre id="round_out"></pre>
+      <div id="offers_list"></div>
+    </section>
+
+    <section>
+      <h2>Choose Offer (fallback form)</h2>
+      <label>Session ID</label>
+      <input id="choose_session_id" placeholder="From Start" />
+      <div class="row">
+        <div>
+          <label>Round Number</label>
+          <input id="choose_round_number" type="number" value="1" />
+        </div>
+        <div>
+          <label>Offer Index (1-based)</label>
+          <input id="choose_offer_index" type="number" value="1" />
+        </div>
+      </div>
+      <button id="btnChoose">Choose Offer</button>
+      <pre id="choose_out"></pre>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
